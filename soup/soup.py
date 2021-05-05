@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
-url = "https://waterstones.com/books/bestsellers"
+url = "https://www.waterstones.com/books/bestsellers/sort/bestselling/format/17"
 response = requests.get(url)
 
 html_icerigi = response.content
@@ -31,4 +31,4 @@ for i in range(len(soup.find_all("div", {"class" : "title-wrap"}))):
     d = d.append(dataframe, ignore_index=True)
 print(d)
 
-d.to_csv("data_bs.csv", mode = "a", header = True, index = False)
+d.to_csv("data_bs.csv", mode = "a", header = True, index = False, sep= ";")
