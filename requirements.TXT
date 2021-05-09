@@ -1,0 +1,6 @@
+beautifulsoup4==4.9.3
+bs4==0.0.1
+matplotlib==3.4.1
+pandas==1.2.4
+selenium==3.141.0
+
